@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>DOM Controll Basics</title>
+	</head>
+
+	<body>
+		<p id="result">pタグの文字列</p>
+		<!-- ボタンを押した時に処理を実行 -->
+		<input id="button" type="button" value="Get">
+			
+		<hr>
+
+		<div>element1(div)</div>
+		<p>element2(p)</p>
+		<div>element3(div)</div>
+		<span>element4(span)</span>
+		<div>element5(div)</div>
+		<input id="button2" type="button" value="Get">
+
+		<hr>
+
+		<!--
+			name属性はテキストボックスの中身を意味する
+			→テキスト内容がresultという変数に代入されているイメージ
+		-->
+		<input name="result" type="text">
+		<input id="button3" type="button" value="Get">
+
+		<hr>
+
+		<ul>
+			<li class="foo">element1</li>
+			<li class="bar">element2</li>
+			<li class="foo">element3</li>
+			<li>element4</li>
+			<li class="bar">element5</li>
+		</ul>
+
+		<input id="button4" type="button" value="Get">
+
+		<hr>
+
+		<ul id="list">
+		</ul>
+		<input id="button5" type="button" value="Add">
+
+		<hr>
+
+		<ul>
+			<li id="oldList">old element</li>
+		</ul>
+		<input id="button6" type="button" value="Replace">
+
+		<hr>
+
+		<ul id="list2">
+			<li>element1</li>
+			<li>element2</li>
+			<li>element3</li>
+			<li>element4</li>
+			<li>element5</li>
+		</ul>
+		<input id="button7" type="button" value="Remove">
+
+		<hr>
+
+		<ul id="list1">
+		</ul>
+		<input id="textBox" type="text">
+		<input id="button8" type="button" value="Add">
+
+		<!-- <hr>
+
+		<ul id="list_ex">
+		</ul>
+		<input id="textBox" type="text">
+		<input id="button_ex" type="button" value="add"> -->
+
+		<script src="main.js"></script>
+	</body>
+
+</html>
