@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>グリッドシステムについて</title>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+			integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+			<style>
+				.orange {
+					background-color: orange;
+					border: black 1px solid;
+				}
+			</style>
+	</head>
+
+	<!--
+		・グリッドの列数は12を基準としている
+		→col-(数字)と記述することで列幅を指定できる
+		→→列幅の数字は"一列で12"となるように設定する
+	-->
+
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="col-1 orange">1</div>
+				<div class="col-1 orange">1</div>
+				<div class="col-1 orange">1</div>
+				<div class="col-1 orange">1</div>
+				<div class="col-1 orange">1</div>
+				<div class="col-1 orange">1</div>
+				<div class="col-1 orange">1</div>
+				<div class="col-1 orange">1</div>
+				<div class="col-1 orange">1</div>
+				<div class="col-1 orange">1</div>
+				<div class="col-1 orange">1</div>
+				<div class="col-1 orange">1</div>
+			</div>
+			<div class="row">
+				<div class="col-2 orange">2</div>
+				<div class="col-2 orange">2</div>
+				<div class="col-2 orange">2</div>
+				<div class="col-2 orange">2</div>
+				<div class="col-2 orange">2</div>
+				<div class="col-2 orange">2</div>
+			</div>
+			<div class="row">
+				<div class="col-3 orange">3</div>
+				<div class="col-3 orange">3</div>
+				<div class="col-3 orange">3</div>
+				<div class="col-3 orange">3</div>
+			</div>
+			<div class="row">
+				<div class="col-4 orange">4</div>
+				<div class="col-4 orange">4</div>
+				<div class="col-4 orange">4</div>
+			</div>
+			<div class="row">
+				<div class="col-6 orange">6</div>
+				<div class="col-6 orange">6</div>
+			</div>
+			<div class="row">
+				<div class="col-12 orange">12</div>
+			</div>
+			<div class="row">
+				<div class="col-9 orange">9</div>
+				<div class="col-3 orange">3</div>
+			</div>
+			<div class="row">
+				<div class="col-3 orange">3</div>
+				<div class="col-6 orange">6</div>
+				<div class="col-3 orange">3</div>
+			</div>
+			<!-- autoは等幅となる -->
+			<div class="row">
+				<div class="col orange">auto</div>
+				<div class="col-5 orange">5</div>
+				<div class="col orange">auto</div>
+			</div>
+			<!-- 合計数が12を超えると改行される -->
+			<div class="row">
+				<div class="col-6 orange">6</div>
+				<div class="col-6 orange">6</div>
+				<div class="col-6 orange">6</div>
+			</div>
+
+			<hr>
+			<!--
+				グリッドオプションについて(指定した幅以下のpxになると縦に並ぶようになる)
+				→初期値はExtra Small(576px未満、スマホ向け)
+			-->
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-6 orange">6</div>
+					<div class="col-sm-6 orange">6</div>
+					<div class="col-sm-6 orange">6</div>
+					<div class="col-sm-6 orange">6</div>
+				</div>
+				<div class="row">
+					<div class="col-sm orange">A</div>
+					<div class="col-sm orange">B</div>
+					<div class="col-sm orange">C</div>
+				</div>
+			</div>
+
+			<hr>
+			<!-- グリッドオプションの複数設定とネスト -->
+			<div class="container">
+				<!-- グリッドオプションは複数設定可能 -->
+				<!-- <div class="row">
+					<div class="col-lg-1 col-md-2 orange">1</div>
+					<div class="col-lg-1 col-md-2 orange">1</div>
+					<div class="col-lg-1 col-md-2 orange">1</div>
+					<div class="col-lg-1 col-md-2 orange">1</div>
+					<div class="col-lg-1 col-md-2 orange">1</div>
+					<div class="col-lg-1 col-md-2 orange">1</div>
+					<div class="col-lg-1 col-md-2 orange">1</div>
+					<div class="col-lg-1 col-md-2 orange">1</div>
+					<div class="col-lg-1 col-md-2 orange">1</div>
+					<div class="col-lg-1 col-md-2 orange">1</div>
+					<div class="col-lg-1 col-md-2 orange">1</div>
+					<div class="col-lg-1 col-md-2 orange">1</div>
+				</div> -->
+
+				<!-- Lv.1階層で9:3に分割した9のLv.2階層をさらに8:4に分割 -->
+				<div class="row">
+					<div class="col-sm-9 orange">
+						Level 1: 9
+						<div class="row">
+							<div class="col-sm-8 orange">Level2: 8</div>
+							<div class="col-sm-4 orange">Level2: 4</div>
+						</div>
+					</div>
+					<div class="col-sm-3 orange">
+						Level 1: 3
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+			crossorigin="anonymous"></script>
+	</body>
+
+</html>

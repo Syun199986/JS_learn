@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>span要素について</title>
+		<style>
+			.red {
+				color: red;
+			}
+		</style>
+	</head>
+
+	<body>
+		<!-- 
+			・span要素について
+			→意味を持たない要素
+			→実務上では、文章の特定の部分をCSSで装飾したい時によく利用する要素
+			→他に適切な意味的要素がない時にのみ使用する
+		-->
+		<p>私は、<span class="red">HTML</span>と<span class="red">CSS</span>を学びます。</p>
+		<hr>
+		これは<div>div</div>です。
+		<hr>
+		これは<span>span</span>です。
+		<!-- 
+			・divとspanの違いについて
+			div ：ブロック要素、改行される
+			span：インライン要素
+			※ブロック要素とは、要素の高さと幅が指定できる要素、インライン要素は指定できない要素のこと
+
+			<div><span>テスト</span></div>はOK
+			<span><div>テスト</div></span>はNG
+			であることに注意
+		-->
+	</body>
+
+</html>

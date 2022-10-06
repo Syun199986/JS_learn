@@ -1,0 +1,12 @@
+・Flexboxとは
+→複雑なレイアウトも簡単に組めるCSSのレイアウトモジュール
+→→横並びのレイアウトを作成する際によく使う書き方
+→→以前はfloatを用いるのが一般的だったが、今はflexboxが主流
+
+・基本のプロパティ6つ
+→flex-direction
+→flex-wrap
+→justify-content
+→align-items
+→align-context
+→flex-flow

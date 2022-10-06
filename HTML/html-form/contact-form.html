@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>お問合せフォーム</title>
+	</head>
+
+	<body>
+		<!-- 
+			label要素について
+			→文章の意味づけがより正しくできる
+			→チェックボックスやラジオボタンで、ラベルの部分をクリックしても選択できるようになる
+			→→性別だったら「男性」の文字の部分など
+		-->
+		<h1>お問合せフォーム</h1>
+		<form action="#" method="POST">
+			<dl>
+				<dt><label for="username">お名前</label></dt>
+				<dd><input id="username" type="text" name="username"></dd>
+
+				<dt><label for="email">メールアドレス</label></dt>
+				<dd><input id="email" type="text" name="email"></dd>
+
+				<dt><label for="area">お住まいの地域</label></dt>
+				<dd>
+					<!-- 
+						プルダウンメニューの作成
+						→親要素であるselect要素を使用し、その中に選択肢をoption要素で記述
+						selected属性：値はなく、選択肢が初期状態で選択される
+												→select要素内で1つのoptionだけがselected属性を持てることに注意
+					-->
+					<select id="area" name="area">
+						<option value="" selected>選択してください</option>
+						<option value="hokkaido">北海道</option>
+						<option value="tohoku">東北</option>
+						<option value="kanto">関東</option>
+						<option value="chubu">中部</option>
+						<option value="kinki">近畿</option>
+						<option value="shikoku">四国</option>
+						<option value="kyushu">九州</option>
+						<option value="okinawa">沖縄</option>
+					</select>
+				</dd>
+
+				<dt>性別</dt>
+				<dd>
+					<!-- 
+						ラジオボタンの作成(項目を1つだけ選択できるボタン)
+						checked属性：値はなく、選択肢が初期状態で選択される
+					-->
+					<label><input type="radio" name="gender" value="male" checked>男性</label>
+					<label><input type="radio" name="gender" value="female">女性</label>
+				</dd>
+
+				<!-- テキストエリアの作成 -->
+				<dt><label for="contents">お問合せ内容</label></dt>
+				<dd><textarea id="contents" name="contents"></textarea></dd>
+
+				<!-- 
+					チェックボックスの作成
+					→checked属性を使用することも可能(初期状態でチェックを付けておく)
+				-->
+				<dt><label for="privacy">プライバシーポリシーに同意する</label></dt>
+				<dd><input id="privacy" type="checkbox" name="privacy" value="1"></dd>
+
+			</dl>
+			<!--
+				送信ボタンの作成
+				→実際には、form要素のaction属性に指定したパスにデータが送信される
+			-->
+			<input type="submit" name="submit" value="送信">
+		</form>
+	</body>
+
+</html>

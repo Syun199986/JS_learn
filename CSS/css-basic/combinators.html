@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>結合子を使ったセレクターについて</title>
+	</head>
+
+	<style>
+		/* ユニバーサルセレクタ："*"(全ての要素) */
+		/* * {
+			margin: 0;
+		} */
+
+		/* 子孫セレクタ："A B"(Aの階層下の全てのB) */
+		/* p要素の階層下の全てのstrong要素を指定 */
+		/* p strong {
+			color: red;
+		} */
+
+		/* 子セレクタ："A > B"(Aの1つ下の階層のB) */
+		/* p要素の1つ下の階層のstrong要素 */
+		/* p > strong {
+			color: red;
+		} */
+
+		/* 隣接セレクタ："A + B"(Aの直後に記述した同じ階層のB) */
+		/* h2要素の直後に記述した同じ階層のp要素 */
+		/* h2 + p {
+			color: red;
+		} */
+
+		/* 間接セレクタ："A ~ B"(Aの後に記述した全ての同階層のB) */
+		/* h1要素の後に記述した全ての同階層のp要素 */
+		h1 ~ p {
+			color: red;
+		}
+	</style>
+
+	<body>
+		<h1>結合子を使ったセレクターについて</h1>
+		<h2>今日の<strong>注意事項</strong></h2>
+		<p><strong>風邪</strong>の季節です</p>
+		<p>
+			家に帰ったら<strong>手洗い</strong>しましょう
+			<span>必要に応じて<strong>アルコール消毒</strong>もしましょう</span>
+		</p>
+	</body>
+
+</html>

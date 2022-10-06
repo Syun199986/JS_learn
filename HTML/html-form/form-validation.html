@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>フォームバリデーションについて</title>
+	</head>
+
+	<body>
+		<form action="#" method="POST">
+			<!--
+				required属性：入力必須制約をつける(値なし)
+				maxlength属性：文字数制限を設ける(値は文字数)
+				(注意点)
+				・クライアント側のフォームバリデーションはユーザーが簡単に書き換えられるため、
+					HTMLのフォームバリデーションは不正対策には使えない
+			-->
+			<input type="text" required maxlength="5">
+			<input type="submit" value="送信">
+		</form>
+	</body>
+
+</html>

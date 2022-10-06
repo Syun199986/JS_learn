@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>マージンの相殺について</title>
+	</head>
+
+	<!-- 
+		・マージンの相殺について
+		→上下のマージンは相殺されてしまう
+		→→左右は相殺されない
+		→パディングとボーダーは上下左右どこも相殺されない
+
+		→親と子のボックスの上下マージンは相殺される
+		例：
+		<div> → div要素の上マージンとh1要素の上マージンが相殺
+			<h1>ボックスモデルの練習</h1>
+			<p>ボックスモデルの練習</p>
+		</div> → div要素の下マージンとp要素の下マージンが相殺
+	-->
+
+	<style>
+		h1, p {
+			background-color: #6495ed;
+		}
+
+		h1 {
+			margin-bottom: 100px;
+			margin-top: 50px;
+		}
+
+		p {
+			margin-top: 50px;
+			margin-bottom: 50px;
+		}
+
+		div {
+			background-color: #ccc;
+			margin-top: 100px;
+		}
+	</style>
+
+	<body>
+		<div>
+			<h1>マージンの相殺</h1>
+			<p>ボックスモデルの練習ボックスモデルの練習ボックスモデルの練習ボックスモデルの練習ボックスモデルの練習ボックスモデルの練習ボックスモデルの練習ボックスモデルの練習ボックスモデルの練習ボックスモデルの練習</p>
+		</div>
+	</body>
+
+</html>

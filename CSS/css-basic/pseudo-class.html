@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>擬似クラスについて</title>
+	</head>
+
+	<!--
+		・擬似クラスとは
+		→要素の状態に応じて、CSSの設定を適用することができる
+		a:link：未訪問のリンク
+		a:visited：訪問済みのリンク
+		a:hover：ホバー状態のリンク(カーソルを乗せた状態(マウスオーバー))
+		a:active：クリック状態のリンク(クリックして押し込んだままの状態)
+
+		・記述の順番について
+		→link, visited, hover, activeの順番で記述する(LVHA)
+
+		・モバイル端末について
+		→スマホやタブレット等ではホバー状態が発生しない
+	-->
+
+	<style>
+		a:link {
+			color: black;
+		}
+
+		a:visited {
+			color: red;
+		}
+
+		a:hover {
+			color: green;
+		}
+
+		a:active {
+			color: blue;
+		}
+	</style>
+
+	<body>
+		<a href="#">リンク</a>
+	</body>
+
+</html>

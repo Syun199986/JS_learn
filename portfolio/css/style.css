@@ -1,0 +1,105 @@
+@charset "UTF-8";
+
+/* common */
+body {
+	margin: 0;
+}
+
+img {
+	/* imgタグ下のスペースをリセット */
+	vertical-align: bottom;
+}
+
+h1, h2, h3, p {
+	margin: 0;
+}
+
+.wrapper {
+	max-width: 600px;
+	margin: 0 auto;
+	/* paddingで上下左右の余白を調整 */
+	padding: 30px 4%;
+}
+
+/* header */
+header {
+	text-align: center;
+}
+
+.photo {
+	width: 120px;
+	height: 120px;
+	border-radius: 50%;
+	margin-bottom: 10px;
+}
+
+/* main */
+h2 {
+	text-align: center;
+}
+
+.myskills {
+	background-color: #f1f1f1;
+}
+
+.myskills ul {
+	margin-top: 30px;
+	/* noneにしてリストのドットを消す */
+	list-style: none;
+	padding: 0;
+	/* displayで横並びに設定 */
+	display: flex;
+	/* justify-contentで余白付きの等間隔に並べる */
+	justify-content: space-around;
+}
+
+.skill_html5 {
+	background-color: #e44d26;
+}
+
+.skill_css3 {
+	background-color: #1572b6;
+}
+
+.skill_javascript {
+	background-color: #ebbc00;
+}
+
+.myskills ul li {
+	width: 90px;
+	height: 90px;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #ffffff;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.works_box {
+	/* 最大の横幅を指定 */
+	max-width: 450px;
+	margin: 40px auto;
+}
+
+.works_image {
+	/* 写真の横幅を親要素に合わせる */
+	width: 100%;
+	height: auto;
+}
+
+.works_box h3 {
+	margin-top: 10px;
+}
+
+.works_box p {
+	margin-top: 7px;
+}
+
+/* footer */
+footer {
+	background-color: #000000;
+	color: #ffffff;
+	text-align: center;
+}

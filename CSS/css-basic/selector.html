@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>セレクターについて</title>
+	</head>
+
+	<style>
+		/* エレメント(要素)セレクター：要素の名前を指定 */
+		body {
+			background-color: #ccc;
+		}
+
+		/* idセレクター："#"を付けて指定 */
+		#hello {
+			color: blue;
+		}
+
+		/* classセレクター："."を付けて指定 */
+		.completed {
+			text-decoration: line-through;
+		}
+
+		.red {
+			color: red;
+		}
+	</style>
+
+	<body>
+		<h1>セレクターについて</h1>
+		<!-- idはユニークである必要があることに注意 -->
+		<p id="hello">hello</p>
+		<ul>
+			<li><input type="checkbox">読書</li>
+			<!-- classは複数のタグに指定可能(idとの違い) -->
+			<li class="completed"><input type="checkbox" checked>HTMLの学習</li>
+			<!-- classは1つの要素に対して複数指定が可能(スペース区切りで指定) -->
+			<li class="completed red"><input type="checkbox" checked>JSの学習</li>
+		</ul>
+	</body>
+
+</html>

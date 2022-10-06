@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Flexbox入門</title>
+	</head>
+
+		<!-- 
+			・flex-directionプロパティで子要素の並ぶ向きを指定する
+			row(初期値)    ：左から右へ
+			row-reverce   ：右から左へ
+			column        ：上から下へ
+			column-reverce：下から上へ
+		-->
+		<!--
+			・flex-wrapプロパティで子要素の折り返しを指定する
+			nowwrap(初期値)：折り返さずに一列に表示
+			wrap          ：折り返して上から下へ
+			wrap-reverce  ：折り返して下から上へ
+		-->
+		<!--
+			・justify-contentプロパティで子要素の「水平方向」の揃えを指定する(親要素の空きスペースがあった場合)
+			flex-start(初期値)：左揃え
+			flex-end         ：右揃え
+			center           ：中央揃え
+			space-between    ：最初と最後の両端の要素は端に配置し、残りを均等に配置
+			space-around     ：コンテナの両端にアイテム間隔の半分の大きさの余白(均等配置)
+			space-evenly     ：コンテナの両端にアイテム間隔と同じ大きさの余白(均等配置)
+		-->
+		<!-- 
+			・align-itemsプロパティで子要素の「垂直方向」の揃えを指定する
+			stretch(初期値)：親要素の高さに合わせて広がる
+			flex-start    ：親要素の高さ内で上揃えにする
+			flex-end      ：親要素の高さ内で下揃えにする
+			center        ：親要素の高さ内で中央揃えにする
+			baseline      ：子要素のベースラインで揃える
+		-->
+		<!-- 
+			・align-contentプロパティで子要素を"複数行"にした時の「垂直方向」の揃えを指定する
+			stretch(初期値)：親要素の高さに合わせて広がる
+			flex-start    ：親要素の高さ内で上揃えにする
+			flex-end      ：親要素の高さ内で下揃えにする
+			center        ：親要素の高さ内で中央揃えにする
+			space-between ：最初と最後の行を端に配置し、残りの行を均等に配置
+			space-around  ：最初と最後の行の端にアイテム間隔の半分の大きさの余白(均等配置)
+		-->
+		<!--
+			・flex-flowプロパティでflex-directionとflex-wrapをまとめて指定する
+			(記述例)
+			flex-flow: row nowrap(direction wrapの順で指定);
+			※row nowrap(初期値)が初期値
+		-->
+	<style>
+		.container {
+			display: flex;
+			/* flex-direction: row; */
+			/* flex-wrap: wrap; */
+			/* justify-content: space-evenly; */
+			/* vh：ビューポートハイト
+				→ビューポートの高さに基づく単位
+				→→100vhでブラウザの表示領域いっぱいの高さになる */
+			/* height: 100vh; */
+			/* align-items: baseline; */
+			/* flex-wrap: wrap; */
+			/* align-content: space-around; */
+			/* flex-flow: row nowrap; */
+			/* flex-flow: row-reverse wrap; */
+		}
+		.item {
+			background-color: #ffa61c;
+			margin: 10px;
+			padding: 20px;
+		}
+
+		/* .lg {
+			font-size: xx-large;
+		} */
+	</style>
+
+	<body>
+		<div class="container">
+			<div class="item">item01</div>
+			<div class="item">item02</div>
+			<div class="item">item03</div>
+			<div class="item">item04</div>
+			<div class="item">item05</div>
+			<div class="item">item06</div>
+			<div class="item">item07</div>
+			<div class="item">item08</div>
+			<div class="item">item09</div>
+			<div class="item">item10</div>
+			<div class="item">item11</div>
+			<div class="item">item12</div>
+			<div class="item">item13</div>
+			<div class="item">item14</div>
+			<div class="item">item15</div>
+			<div class="item">item16</div>
+			<div class="item">item17</div>
+			<div class="item">item18</div>
+		</div>
+	</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=˝, initial-scale=1.0">
+		<title>CSSの基本</title>
+		
+		<!-- 
+			同じ内容を別場所で書いた場合の優先順位について
+			→インライン > 内部参照 > 外部参照
+			→→同一ファイル内では上から下へと評価
+		-->
+
+		<style>
+			/* 内部参照：CSSの記述量が少ない場合に用いることを推奨 */
+			h2 {
+				/* 色指定について
+					→RGB値：#FF(R)00(G)00(B)のように、16進数で値を指定 
+					→→10進数やキーワードで指定することも可能 */
+				color: #00aa00;
+			}
+
+			/* 背景の指定 */
+			body {
+				/* 色で指定 */
+				/* background-color: #ccc; */
+				/* 画像で指定 */
+				background-image: url(images/dot.png);
+				/* 背景画像の繰り返し */
+				background-repeat: no-repeat;
+				/* 背景画像の位置指定 */
+				/* background-position: center; */
+			}
+			h1 {
+				background-color: blue;
+			}
+		</style>
+		<!-- 外部参照：linkタグを用いて、参照先のパスを指定する(rel:relation(関係)) -->
+		<link rel="stylesheet" href="css/base.css">
+	</head>
+
+	<body>
+		<!-- インライン：検証のために、一時的にスタイルを当てたい時のみ用いることを推奨 -->
+		<h1 style="color: #aa0000;">インライン</h1>
+		<h2>内部参照</h2>
+		<h3>外部参照</h3>
+	</body>
+
+</html>

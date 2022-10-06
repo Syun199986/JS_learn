@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>ログインフォームについて</title>
+	</head>
+
+	<body>
+		<!-- formタグ(フォーム概要のまとめテキスト参照) -->
+		<form action="#" method="POST">
+			<!-- 
+				text(type属性)：1行フィールドで、改行はできない
+				name属性：サーバーに送信する値を定義
+				placeholder属性：フォームの説明テキスト(入力時には非表示となる)
+
+				password(type属性)：入力値を隠す、1行フィールド
+
+				submit(type属性)：フォームを送信するボタンを設定
+				value属性：ボタンラベルのテキストを指定
+			-->
+			<input type="text" name="username" placeholder="ユーザーネーム">
+			<input type="password" name="password" placeholder="パスワード">
+			<input type="submit" value="ログイン">
+		</form>
+	</body>
+
+</html>

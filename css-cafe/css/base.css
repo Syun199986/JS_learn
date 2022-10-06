@@ -1,0 +1,190 @@
+@charset "utf-8";
+
+/* common(共通部分) */
+html {
+	font-size: 100%;
+}
+
+body {
+	font-family: "Hiragino Kaku Gothic proN", "メイリオ", "sans-serif";
+	color: #555;
+	/* line-heightの単位は付けないのが一般的 */
+	/* 1.5 → 行間を1.5倍にする */
+	line-height: 1.5;
+}
+
+img {
+	/* ブラウザの幅に対して、何%の幅をキープするか */
+	width: 100%;
+}
+
+.wrapper {
+	/* 幅を940px以上にならないようにする(940pxまではブラウザの幅に依存) */
+	max-width: 940px;
+	/* margin: (上下) (左右); */
+	margin: 0 auto;
+	/* モバイル端末での閲覧を見越して、paddingで左右の余白を作る */
+	padding: 0 10px;
+}
+
+/* header */
+header {
+	border-top: 8px solid #8c6239;
+}
+
+.header_logo {
+	width: 90px;
+}
+
+.header_content {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin: 10px auto;
+}
+
+header nav ul {
+	display: flex;
+}
+
+header nav ul li {
+	margin-left: 30px;
+}
+
+header nav ul li a {
+	/* リンクのアンダーラインを削除 */
+	text-decoration: none;
+	color: #555;
+}
+
+header nav ul li a:hover,
+header nav ul li a:active,
+/* "Home"のみcullentクラスを適用しているため、常時ブラウンになる(li.current) */
+header nav ul li.current a {
+	color: #8c6239;
+}
+
+/* id属性は"#"で指定 */
+/* 仮のイメージを当てておく */
+#main_image {
+	width: 100%;
+	height: 50vh;
+	/* background-image: url(https://via.placeholder.com/3000x2500); */
+	background-image: url(../images/cafe.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+/* contents */
+.contents {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 30px;
+}
+
+#main_content {
+	width: 65%;
+}
+
+#sidebar {
+	width: 31%;
+}
+
+#home h2 {
+	margin-bottom: 20px;
+	padding-bottom: 5px;
+	border-bottom: 1px solid #8c6239;
+	font-size: 1.2rem;
+}
+
+#info dl {
+	display: flex;
+	/* wrapを用いて、横並びで収まりきらなかった場合に改行する指定を行う */
+	flex-wrap: wrap;
+	margin-bottom: 50px;
+}
+
+#info dt {
+	/* フォントサイズを拡大・縮小してもレイアウトが崩れないようにするために、emで横幅を指定 */
+	width: 7em;
+}
+
+#info dd {
+	width: calc(100% - 7em);
+}
+
+#info dt,
+#info dd {
+	margin-bottom: 10px;
+}
+
+#campaign ul li {
+	margin-bottom: 10px;
+	/* リストのドットを削除 */
+	list-style-type: none;
+}
+
+#sidebar ul li {
+	margin-bottom: 20px;
+	list-style-type: none;
+}
+
+/* footer */
+footer {
+	margin-top: 100px;
+	padding: 30px;
+	text-align: center;
+	color: #fff;
+	background-color: #a67c52;
+}
+
+footer ul {
+	margin-bottom: 20px;
+	font-size: 0.9rem;
+}
+
+footer ul li {
+	/* inline-blockは、要素の並び方についてはinline要素のような動作をするものの、要素の中身はblock要素のような動作をする → 結果として、要素が横並びになる */
+	display: inline-block;
+	margin: 5px;
+}
+
+footer ul li a {
+	color: #fff;
+	text-decoration: none;
+}
+
+footer ul li a:hover,
+footer ul li a:active {
+	/* opacityで文字が70%透過する */
+	opacity: .7;
+}
+
+small {
+	font-size: 0.7rem;
+}
+
+/* レスポンシブ設定(メディアクエリの設定) */
+/* @media(条件){}：メディアクエリの記述方法 */
+@media(max-width: 600px) {
+	/* 横幅が600px以下になった時に適用される */
+	html {
+		font-size: 87.5%;
+	}
+
+	.header_logo {
+		width: 60px;
+	}
+
+	/* 横幅600px以下でコンテンツを縦並びにする */
+	.contents {
+		flex-direction: column;
+		margin-top: 10px;
+	}
+
+	#main_content,
+	#sidebar {
+		width: 100%;
+	}
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>フォントの設定について</title>
+	</head>
+
+	<!-- 
+		・フォントについて
+		→具体的なフォント名を指定："メイリオ"など(""で囲む)
+		→フォントの種類を示すキーワード(フォントファミリー)で指定：serif(明朝体)、sans-serif(ゴシック体)など(""で囲む必要なし)
+	-->
+
+	<style>
+		html {
+			/* font-family: serif; */
+			/* font-family: sans-serif; */
+			/* 複数指定が可能(環境に適したフォントが選ばれる) */
+			font-family: "Hiragino Kaku Gothic ProN", "メイリオ", sans-serif;
+		}
+	</style>
+
+	<body>
+		<p>Hello, World こんにちは</p>
+	</body>
+
+</html>
